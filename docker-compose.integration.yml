@@ -16,6 +16,8 @@ services:
   accountownerapp:
     depends_on:
       - db
+    links: 
+      - db
     image: "accountownerapp:B${BUILD_NUMBER}"
     build:
       context: .
